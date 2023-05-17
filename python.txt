@@ -1,0 +1,573 @@
+Ör: Kullanıcıya ismini sorup “Merhaba İsim” yazdıran kodlar:
+isim = input("İsminiz nedir? ")
+print("Merhaba", isim)
+
+Ör: Kullanıcın girdiği iki sayıyı toplayan kodlar:
+deger1 = int(input("İlk sayıyı giriniz:"))
+deger2 = int(input("İkinci sayıyı giriniz:"))
+toplam = deger1 + deger2
+print(deger1, "+", deger2, "=", toplam) 
+
+Ör: Kullanıcın girdiği iki sayıyı toplayan kodlar:
+deger1 = int(input("İlk sayıyı giriniz:"))
+deger2 = int(input("İkinci sayıyı giriniz:"))
+toplam = deger1 + deger2
+print(deger1, "+", deger2, "=", toplam) 
+
+Ör: Girilen sayılarla 4 işlem yapma:
+s1 = int(input("Sayı 1 :"))
+s2 = int(input("Sayı 2 :"))
+print("toplam :", s1+s2)
+print("fark :", s1-s2)
+print("çarpma :", s1*s2)
+print("bölme :", s1/s2)
+
+üç basamaklı sayıya basamak adı yazdırma
+sayı=int(input("sayı giriniz:"))
+yüzlerb=sayı/100
+print(int(yüzlerb))
+onlarb=sayı/10
+print(int(onlarb))
+birlerb=sayı
+print(int(birlerb))
+
+1.Girilen sayının tek mi çift mi olduğunu bulan program.
+sayi=int(input("Sayı giriniz: "))
+if(sayi%2==0):
+  print("sayı cift")
+else:
+  print("sayı tek")
+
+2. Python Kullanıcı tarafından girilen hava sıcaklığı 5 °C ve altındaysa 
+“Soğuk”; 6-14 °C arasındaysa “Ilık”; 15 °C ve daha fazlaysa “Sıcak” 
+çıktılarını veren kodu yazınız.
+hava=int(input("hava sıcaklığını giriniz"))
+if(hava<5):
+  print("hava soğuk")
+elif(hava>=5 and hava<=15):
+  print("hava ılıktır")
+else:
+  print("hava sıcak")
+
+3. Girilen plaka kodu 06 ise ekrana Ankara, 
+07 ise Antalya, 35 ise İzmir çıktısı veren kodu yazınız.
+plaka=(input("plaka kodu giriniz"))
+if(plaka=="06"):
+ print("ankara")
+elif(plaka=="07"):
+  print("antalya")
+elif(plaka=="35"):
+  print("izmir")
+else:
+  print("Bilinmiyor")
+4. Python Kullanıcıdan kullanıcı adı ve şifre girilmesi istensin. 
+Kullanıcı adı “Admin”; şifre 1919 ise “Giriş başarılı”; 
+değilse “Kullanıcı adı ya da şifre yanlış” yazdırılsın.
+kullanici=input("Kullanıcı adı giriniz:")
+sifre=input("sifre giriniz")
+
+if(kullanici=="admin" and sifre=="1919"):
+  print("giris başarılı")
+else:
+  print("kullanıcı adı yada sifre hatalı")
+
+5. Python Girilen sayı hem 3 hem de 5’e tam bölünüyorsa “15’e tam bölünür.”; 
+bölünmüyorsa “15’e tam bölünmez.” çıktıları veren kodu yazınız.
+sayı=int(input("sayı giriniz"))
+if(sayı%5==0 and sayı%3==0 ):
+  print("15 e tam bölünür")
+else:
+ print("15 tam bölünmez")
+
+6. Python Kullanıcıdan adını, maaşını ve çalışma yılını girmesini isteyiniz. 
+0-5 yıl arası çalışanlara %10; 
+6-10 yıl arası çalışanlara %15; 
+11 ve daha fazla yıl çalışanlara %25 zam yapılmaktadır. 
+Buna göre “Sayın …………….., zamlı maaşınız …….. TL” çıktısı veren kodu yazınız.
+adı=input("kullanıcızı adı giriniz ")
+maas=int(input("maas giriniz "))
+yıl=int(input("calısma yıl giriniz "))
+if(yıl<5):
+  maas+=maas*10/100
+elif(yıl>=5 and yıl<=10):
+  maas+=maas*15/100
+else:
+  maas+=maas*25/100
+print("Sayın: ",adı,"maasnızın zamlı hali: ",maas,"tldir: ")
+
+7. Kullanıcıdan vize ve final notu girilmesi istensin. Vize notunun %40'ı ve
+final notunun %60'ının topplamı 60'tan düşükse ekrana "başarısız" yazsın,
+eşit ve yüksekse "başarılı" yazsın.
+vize=int(input("vize notu giriniz"))
+final=int(input("final notu giriniz"))
+sonuc=(vize*40/100)+(final*60/100)
+if(sonuc<60):
+  print("basarısız" sonuc)
+else(sonuc>60):
+  print("başarılı" sonuc)
+
+A değişkeni 1 olduğu sürece ekrana "hello world" yazan program
+a=1
+while a==1:
+ print("Hello World")
+ a=0
+
+ 1-10 arası sayıları ekrana yazdıran program
+a=1
+while a<10:
+ print(a)
+ a+=1
+
+(1) topla
+(2) çıkar
+(3) çarp
+(4) böl
+(5) karesini hesapla
+(6) karekök hesapla
+işlemleri ekrana yazdırılacak, kullanıcı "q" harfini girdiyse programdan çıkılacak. Yukarıdaki sayıları
+girince inputla bilgi alınacak ve işlem ekrana yazdırılacak. Bunlar dışında bir sembol girilirse yanlış
+giriş yazılacak.
+giriş = """
+(1) topla
+(2) çıkar
+(3) çarp
+(4) böl
+(5) karesini hesapla
+(6) karekök hesapla
+"""
+print(giriş)
+anahtar = 1
+while anahtar == 1:
+ soru = input("Yapmak istediğiniz işlemin numarasını girin (Çıkmak i
+çin q): ")
+ if soru == "q":
+ print("çıkılıyor...")
+ anahtar = 0
+ elif soru == "1":
+ sayı1 = int(input("Toplama işlemi için ilk sayıyı girin: "))
+ sayı2 = int(input("Toplama işlemi için ikinci sayıyı girin: "))
+ print(sayı1, "+", sayı2, "=", sayı1 + sayı2)
+ elif soru == "2":
+ sayı3 = int(input("Çıkarma işlemi için ilk sayıyı girin: "))
+ sayı4 = int(input("Çıkarma işlemi için ikinci sayıyı girin: "))
+ print(sayı3, "-", sayı4, "=", sayı3 - sayı4)
+ elif soru == "3":
+ sayı5 = int(input("Çarpma işlemi için ilk sayıyı girin: "))
+ sayı6 = int(input("Çarpma işlemi için ikinci sayıyı girin: "))
+ print(sayı5, "x", sayı6, "=", sayı5 * sayı6)
+ elif soru == "4":
+ sayı7 = int(input("Bölme işlemi için ilk sayıyı girin: "))
+ sayı8 = int(input("Bölme işlemi için ikinci sayıyı girin: "))
+ print(sayı7, "/", sayı8, "=", sayı7 / sayı8)
+ elif soru == "5":
+ sayı9 = int(input("Karesini hesaplamak istediğiniz sayıyı girin
+: "))
+ print(sayı9, "sayısının karesi =", sayı9 ** 2)
+ elif soru == "6":
+ sayı10 = int(input("Karekökünü hesaplamak istediğiniz sayıyı gi
+rin: "))
+ print(sayı10, "sayısının karekökü = ", sayı10 ** 0.5)
+ else:
+ print("Yanlış giriş.")
+ print("Aşağıdaki seçeneklerden birini giriniz:", giriş)
+
+"şçöğüİı" harfleri ekrana yazdırılacak
+tr_harfler = "şçöğüİı"
+for harf in tr_harfler:
+ print(harf)
+
+"123456789" string ifadesinde 3'ten büyük olan rakamlar ekrana yazdırılacak.
+sayılar = "123456789"
+for i in sayılar:
+ if int(i) > 3:
+ print(i)
+
+"şçöğüİı" harfleri içeren şifre oluşturulamaz uyarısı verecek.
+tr_harfler = "şçöğüİı"
+parola = input("Parolanız: ")
+for karakter in parola:
+ if karakter in tr_harfler:
+ print("parolada Türkçe karakter kullanılamaz")
+
+Parola 3'ten küçük 8'den büyük olamaz uyarısı
+while True:
+ parola = input("Bir parola belirleyin: ")
+ if not parola:
+ print("parola bölümü boş geçilemez!")
+ elif len(parola) > 8 or len(parola) < 3:
+ print("parola 8 karakterden uzun 3 karakterden kısa olmamalı")
+ else:
+ print("Yeni parolanız", parola)
+ break
+
+3 ve 20 arasındaki sayılar ekrana yazdırılacak
+for i in range(3, 20):
+ print(i)
+
+Parola 3 ve 8 arasındaysa doğru kabul edilecek
+while True:
+ parola = input("parola belirleyin: ")
+ if not parola:
+ print("parola bölümü boş geçilemez!")
+ elif len(parola) in range(3, 8):
+ print("Yeni parolanız", parola)
+ break
+ else:
+ print("parola 8 karakterden uzun 3 karakterden kısa olmamalı")
+
+0-10 arası çift sayılar yazdırılacak
+for i in range(0, 10, 2):
+ print(i)
+
+10-0 arası sayılar 1 azalarak yazdırılacak
+for i in range(10, 0, -1):
+ print(i)
+
+"Merhaba dünya" yazısının içinde "ü" harfi bulunup bulunmadığı ve eğer bulunduysa hangi
+sırada olduğu yazdırılacak
+karater_dizisi = "Merhaba Dünya"
+a=1;
+for harf in karater_dizisi:
+ if harf == 'ü':
+ print("ü harfi bulundu----",a,". eleman")
+ else:
+ a+=1
+
+
+
+Parola 3 ve 8 arasındaysa doğru kabul edilecek
+while True:
+ parola = input("parola belirleyin: ")
+ if not parola:
+ print("parola bölümü boş geçilemez!")
+ elif len(parola) in range(3, 8):
+ print("Yeni parolanız", parola)
+ break
+ else:
+ print("parola 8 karakterden uzun 3 karakterden kısa olmamalı")
+
+Random sayı tahmin oyunu
+import random
+rand=random.randint(1, 100)
+sayac=0
+while True:
+ sayac+=1
+ sayi=int(input("1 ile 100 arasında değer girin (0 Çıkış):"))
+ if(sayi==0):
+ print("Oyunu İptal Ettiniz")
+ break
+ elif sayi < rand:
+ print("Daha Yüksek Bir Sayı Girin.")
+ continue
+ elif sayi > rand:
+ print("Daha Düşük Bir Sayı Girin.")
+ continue
+ else:
+ print("Rastele seçilen sayı {0}!".format(rand))
+ print("Tahmin sayınız {0}".format(sayac))
+
+1...2...3...5...8 şeklinde fibonacci serisinin ilk 1000 sayısını ekrana veren python kodları.
+sayi1=1
+sayi2=2
+for i in range(3,11):
+ sonuc=sayi1+sayi2
+ print(i,". fibonacci elemanı:",sonuc)
+ sayi1=sayi2
+ sayi2=sonuc
+
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+Yukarıdaki şekli ekrana veren python kodları. 
+for satir in range(1, 6):
+ for sutun in range(1, (satir + 1)):
+ print("* ", end=" ")
+ print()
+
+for x in range(1, 6):
+ for sutun in range(1, (6 - x)):
+ print("* ", end=" ")
+ print()
+
+10 tane kişi sisteme giriş yapacak, her kişiye kaç şehirde yaşadığı sorulacak, 
+her kişi için şehir bilgileri girilecek ve ekrana yazdırılacak.
+for i in range(1,11):
+ sehir=int(input("Kişi kaç şehirde yaşadı: "))
+ for j in range(1,sehir+1):
+ bilgi=input("Şehir girin: ")
+ print(i, ". kişinin yaşadığı",j,". şehir:",bilgi)
+
+Eğer bir sayı başka bir sayının karesi ise bu sayı mükemmel sayıdır. Örneğin 9=3x3 yani mükemmel sayı.
+1 ve 1000 arasındaki mükemmel sayıları bulun.
+
+
+çarpım tablosu
+for i in range(1,11):
+ print()
+ for j in range(1,11):
+ print(i,"x",j,"=",i*j)
+
+"3731220304090" string ifadesinde 2’nin katı olan sayıları ekrana yazdıran Python kodlarını
+yazınız 
+sayi="3731220304090"
+for x in sayi:
+ if(int(x)%2==0 and int(x)!=0):
+ print(x)
+
+Kullanıcıdan telefon numarası girmesi istenecektir. Kullanıcının girmiş olduğu telefon
+numarası 11 haneli değilse tekrar girmesini istenecek ve ekrana yeniden giriş kutusunu
+getirecek olan Python kodlarını yazınız
+while True:
+ tel=input("Telefon numarası girin: ")
+ if len(tel)==11:
+ break
+ else:
+ print("Tekrar girin")
+
+Aşağıdaki çıktıyı veren Python kodlarını iç içe döngü kullanarak yazınız.
+0
+1 2
+2 3 4
+3 4 5 6
+4 5 6 7 8
+5 6 7 8 9 10
+for satir in range(0, 6):
+ for sutun in range(satir, satir+satir+1):
+ print(sutun, end=" ")
+ print()
+
+Kullanıcı programı çalıştırdığında ekrana aşağıdaki bilgiler gelecektir. Her bir bilginin rakamı
+girildiğinde kullanıcıdan sayı girmesi istenecek ve işlem sonucu ekrana yazdırılacaktır.
+Kullanıcı 0 girene kadar işlem devam edecektir. 1-2-3-0 dışında değer girildiğinde “yanlış
+seçim” uyarısı çıkacaktır (25 puan)
+(1) Karakök Al
+(2) Karesini Al
+(3) Küpünü Al
+(0) Çıkış
+giriş = """
+(1) Karakök Al
+(2) Karesini Al
+(3) Küpünü Al
+(0) Çıkış """
+print(giriş)
+anahtar = 1
+while anahtar == 1:
+ soru = input("Yapmak istediğiniz işlemin numarasını girin (Çıkmak i
+çin 0): ")
+ if soru == "0":
+ print("çıkılıyor...")
+ anahtar = 0
+ elif soru == "1":
+ sayi1=int(input("Sayı girin: "))
+ print(sayi1," sayısının karekökü: ", sayi1**0.5)
+ elif soru == "2":
+ sayi2=int(input("Sayı girin: "))
+ print(sayi2," sayısının karesi: ", sayi2**2)
+ elif soru == "3":
+ sayi3=int(input("Sayı girin: "))
+ print(sayi3," sayısının küpü: ", sayi3**3)
+ else:
+ print("Yanlış giriş.")
+ print("Aşağıdaki seçeneklerden birini giriniz:", giriş)
+
+Ekrana "hello world" yazdıran fonksiyon.def ekranaYaz():
+  print("hello world")
+
+ekranaYaz()
+  
+Kullanıcı tarafından girilen iki sayıyı toplayan bir 
+fonksiyon.
+def toplam(a,b):
+  return a+b
+print(toplam(2,3))
+
+İki sayıyı toplayan yukarıdaki fonksiyonu test 
+eden bir fonksiyon.
+def fark(a,b):
+  return a-b
+
+def toplamEkranaYaz():
+  x=int(input("1. sayı girin."))
+  y=int(input("2. sayı girin."))
+  print("2 sayının farkı:",fark(x,y))
+
+toplamEkranaYaz()
+
+Kullanıcı tarafından girilen bir sayının tek mi 
+çift mi olduğunu yazan bir fonksiyon.
+def tekcift(a):
+   if a%2==0:
+     print("sayı cifttir")
+   else:
+      print("sayı tektir")
+
+Kullanıcı tarafından Celsius cinsinden girilen sıcaklığı 
+Fahrenheit’a dönüştüren bir fonksiyon.
+def FahCel(derece):
+  return derece*(-17)
+
+fah=int(input("fahrenayt girin:"))
+print(FahCel(fah))
+
+A-B aralığındaki sayıların toplamını ekrana yazan bir fonksiyon.
+def absayılar(a,b):
+  toplam=0
+  for i in range(a,b+1):
+    toplam=toplam+i
+
+  print("Sayıların toplamı:",toplam) 
+
+absayılar(5,15)
+
+Bir vektörün uzunluğunu hesaplayan bir fonksiyon.
+def vektöruzunluğu(i,j):
+  return (i*i+j*j)**0.5
+print(vektöruzunluğu(3,4))
+
+Ortalama örneği
+def ort(sayac):
+  toplam=0
+  for i in range(1,sayac+1):
+    x=int(input("sayı girin"))
+    toplam=toplam+x
+
+  print("ort:", toplam/sayac)
+
+ort(5)
+
+Liste oluşturma
+liste=[1,2,3,4,5]
+liste2=list()
+liste[0]
+
+Liste elemanlarına erişim
+liste_x=[10,20,30,40,50,60,70]
+liste_y=liste_x[3:5]
+liste_y
+
+Bir listeden yeni bir liste oluşturma
+liste_z=[10,20,30,40,50,60,70]
+for i in liste_z:
+ print(i)
+
+Listeyi ekrana yazdırma
+liste_z.pop()
+liste_z
+
+Dışarıdan girilen değerleri listeye ekleme
+liste_a=list()
+sayı=int(input("liste kac elemanlı olsun."))
+for i in range(0,sayı):
+ deger=input("diziye eleman giriniz:")
+ liste_a.append(deger)
+
+liste_a
+
+ Listeyi silme
+del liste_z[1]
+liste_z
+
+2 listeyi birleştirme
+liste_i=[1,2,3]
+liste_j=[4,5]
+liste_k=liste_i+liste_j
+liste_k
+
+Vize ve final olarak verilen 2 listeden vizenin %40'ı, final'in %60'ının toplamı 65 ve üzeri olanları ekrana veren kod
+
+liste_vize=[25,28,57,95,100]
+liste_final=[65,29,12,55,63]
+for i in range(0,5):
+  vize=liste_vize[i]*0.4
+  final=liste_final[i]*0.6
+  sonuc=vize+final
+  if sonuc>=65:
+    print(i+1,".öğrenci dersi gecti notu:" ,sonuc)
+  else:
+    print(i+1,".öğrenci dersi gecemedi notu:" ,sonuc)
+
+Listedeki elemanları sıralamak
+liste_final.reverse()
+liste_final
+
+Vize ve final notlarının 2li liste şeklinde tutulduğu listeden vizenin %40'ı, final'in %60'ının toplamı 65 ve üzeri olanları ekrana veren kod
+liste_vf=[[35,45],[56,34],[95,100],[15,65],[52,43]]
+sayac=0
+for i in liste_vf:
+  sayac=sayac+1
+  vize=i[0]*0.4
+  final=i[1]*0.6
+  sonuc=vize+final
+  if sonuc>=65:
+    print(sayac,".öğrenci dersi gecti notu:" ,sonuc)
+  else:
+    print(sayac,".öğrenci dersi gecemedi notu:" ,sonuc)
+
+Aşağıdaki sözlükleri oluşturarak sizlerden istenen işlemleri yapınız.
+sozluk = {“Bilim insanı”:”Özlem Türeci”, “Programcı”:”Ada Lovelace”, “Astronom”:”Valentina Vladimirovna Tereşkova” }
+
+sozluk isimli sözlüğü meslekler isimli başka bir sözlüğe kopyalayınız ve ekrana yazdırınız.
+meslek = sozluk.copy()
+print(meslek)
+
+sozluk isimli sözlüğün değerlerini ekrana yazdırınız.
+print(sozluk.values())
+
+sozluk isimli sözlüğü içi boş bir sözlük hâline getiriniz.
+sozluk.clear()
+print(sozluk)
+
+sozluk isimli sözlüğe Matematikçi: Hypatia ikilisini ekleyiniz.
+sozluk["Matematikçi"] = "Hypatia"
+print(sozluk)
+
+sozluk isimli sözlüğün içinde sanatçı anahtarının olup olmadığını sorgulayınız.
+print(sozluk.get("Sanatçı"))
+
+sozluk isimli sözlüğün bilim insanı anahtarındaki değeri Betül Kaçar olarak değiştiriniz.
+sozluk = {“Bilim insanı”:”Özlem Türeci”, “Programcı”:”Ada Lovelace”, “Astronom”:”Valentina Vladimirovna Tereşkova” }
+sozluk["Bilim insanı"]="Betül Kaçar"
+ 
+sozluk isimli sözlüğün şair anahtarı ile eşleşen değeri ekrana yazdırınız.
+sozluk = {“Bilim insanı”:”Özlem Türeci”, “Programcı”:”Ada Lovelace”, “Astronom”:”Valentina Vladimirovna Tereşkova” }
+print(sozluk["Şair"])
+
+ sozluk = {
+         "ulke" : "Türkiye",
+         "sehir" : "Ankara",
+         "ilce"   : "Yenimahalle"
+         }
+
+sözlüğünde "ülke adı: Türkiye" "şehir adı: Ankara" ... şeklinde çıktı veren kodu yazınız.
+sozluk = {
+         "ulke" : "Türkiye",
+         "sehir" : "Ankara",
+         "ilce"   : "Yenimahalle"
+         }
+
+
+for x,y in sozluk.items():
+    print(x + " -- " + ": " + y)
+ 
+keys-values örneği
+sozluk = {
+         "ulke" : "Türkiye",
+         "sehir" : "Ankara",
+         "ilce"   : "Yenimahalle"
+         }
+
+
+for x in sozluk.values():
+    print(x)
+
+#print(sozluk.keys())
+
+
+
+
